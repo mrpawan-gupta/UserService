@@ -1,0 +1,23 @@
+server:
+  port: 8000
+
+spring:
+  data:
+    jdbc:
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/Users
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 60000
+
+  jpa:
+    database: MYSQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
